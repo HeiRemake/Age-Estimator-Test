@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Face Detection with Age Prediction</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Live Face Detection</h1>
+            <p>Real-time age and gender prediction using AI</p>
+        </header>
+        
+        <div class="video-container">
+            <!-- Video feed from Flask -->
+            <img src="{{ url_for('video_feed') }}" width="640" height="480" class="video-stream">
+        </div>
+        
+        <footer>
+            <p>Powered by AI and OpenCV</p>
+        </footer>
+    </div>
+</body>
+</html>
